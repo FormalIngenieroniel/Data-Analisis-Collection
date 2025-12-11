@@ -24,9 +24,11 @@ This module transitions from foundational experiments to structured projects, in
 
 * **Focus:** Combining regression methods with data visualization to understand data behavior, formulate hypotheses, and build reusable machine learning pipelines.
 * **Key Techniques Covered:**
-    * **Data Preprocessing:** Advanced scaling methods (`StandardScaler`, `MinMaxScaler`), correlation analysis (`Df.corr()`, `pairwise_distances`), and using **Scikit-learn Pipelines** and **Column Transformers** for robust numerical and categorical data transformation.
-    * **Descriptive Analysis:** Comprehensive statistical and visual exploration of complex datasets (e.g., IT salaries in Europe).
-    * **Pipeline Engineering:** Serializing and reusing preprocessing pipelines using `joblib` for model deployment and testing with new data.
+    * **Descriptive & Statistical Analysis:** Comprehensive exploration of complex datasets, identifying patterns, outliers, and data peculiarities.
+    * **Data Cleaning & Preprocessing:** Data cleaning, structuring, handling missing values via **Imputation** (`SimpleImputer`), and applying advanced **Data Scaling** techniques (`StandardScaler`, `MinMaxScaler`) to approach Gaussian distribution.
+    * **Feature Engineering:** Correlational analysis (`Df.corr()`, `pairwise_distances`) for variable selection and analysis of conditional probabilities.
+    * **Pipeline Engineering:** Implementing reusable **Scikit-learn Pipelines** and specialized **ColumnTransformers** to process numerical and categorical data simultaneously.
+    * **Model Deployment Prep:** Serialization of preprocessing pipelines using **joblib** and testing the loading/transformation with new, raw input data.
 
 ### 3. OPTIII: Model Comparison, Time Series Analysis, and Advanced ML
 
@@ -34,9 +36,12 @@ This module covers complex predictive challenges, focusing on rigorously evaluat
 
 * **Focus:** Building and comparing multiple advanced predictive models, assessing their metrics, and tackling sequential data problems.
 * **Key Techniques Covered:**
-    * **Regression Modeling:** Building and optimizing models like **RandomForestRegressor** to predict continuous variables (e.g., car fuel consumption (MPG)), evaluated via **MSE** and **RMSE**.
-    * **Classification & Evaluation:** Implementing and comparing various classification algorithms (`RandomForestClassifier`, `KNN`, `LogisticRegression`) using rigorous metrics (`Accuracy`, `Precision`, `Recall`) and cross-validation to manage bias and variance.
-    * **Time Series Analysis:** Applying specialized methods (like **ARIMA** and the **Persistence Model**) to forecast sequential data (e.g., PM2.5 pollution and stock prices). This includes converting a time series regression problem into a **binary classification task**.
+    * **Regression & Evaluation:** Implementing and evaluating regression models (**RandomForestRegressor**) using **Cross-Validation** and rigorous metrics like **MSE** (Mean Squared Error) and **RMSE** (Root Mean Squared Error).
+    * **Hyperparameter Tuning:** Systematic optimization of model parameters using **GridSearchCV** to minimize error and ensure the best generalization capacity.
+    * **Classification & Metrics:** Building classification models (**RandomForestClassifier**, **KNN**, **LogisticRegression**, **DecisionTree**) and assessing their performance with **Accuracy**, **Precision**, and **Recall**.
+    * **Time Series Forecasting:** Analysis and modeling of sequential data (e.g., PM2.5 levels, stock prices), including identification of stationarity and seasonality.
+    * **Time Series Models:** Utilizing advanced techniques like **ARIMA** (Autoregressive Integrated Moving Average) and implementing a **Persistence Model** (Naive) as a performance baseline.
+    * **Advanced Data Transformation:** Converting a Time Series Regression problem into a **Binary Classification** task for alternative prediction modeling.
 
 ---
 
@@ -49,7 +54,7 @@ The projects are primarily developed in Python, leveraging industry-standard lib
 | **Language** | Python |
 | **Data Manipulation** | `pandas`, `numpy` |
 | **Visualization** | `matplotlib`, `seaborn` |
-| **Machine Learning** | `scikit-learn` (sklearn), `RandomForestClassifier`, `KNeighborsClassifier`, `LogisticRegression` |
+| **Machine Learning** | `scikit-learn` (sklearn), `RandomForestClassifier`, `KNeighborsClassifier`, `LogisticRegression`, `RandomForestRegressor`, `DecisionTree` |
 | **Time Series** | `statsmodels` (ARIMA, seasonal decomposition) |
 | **Preprocessing & Pipelines** | `ColumnTransformer`, `StandardScaler`, `MinMaxScaler`, `SimpleImputer`, `joblib` (for serialization) |
 | **Model Evaluation** | `GridSearchCV` (hyperparameter tuning), Cross-validation, **RMSE**, **MSE**, `accuracy_score`, `precision_score`, `recall_score` |
